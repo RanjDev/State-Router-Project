@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Todo from "./pages/Todo";
 import Home from "./pages/components/Home";
 import RandomQuote from "./pages/RandomQuote";
+import ErrorSVG from "./undraw_page_not_found_re_e9o6.svg";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               className="text-center text-4xl text-red-900 font-bold"
             >
               <p>#404, There's nothing here!</p>
+              <img src={ErrorSVG} alt="Error 404 " className="w-4/12 mx-auto" />
             </main>
           }
         />
