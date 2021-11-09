@@ -4,8 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import Todo from "./pages/Todo";
 import Home from "./pages/components/Home";
 import RandomQuote from "./pages/RandomQuote";
-import QuoteCards from "./pages/QuoteCards";
-import QuoteCardDetail from "./pages/QuoteCardDetail";
 
 function App() {
   return (
@@ -15,8 +13,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/random-quote" element={<RandomQuote />} />
-        <Route path="/quote-cards" element={<QuoteCards />} />
-        <Route path="/quote-cards/:detail" element={<QuoteCardDetail />} />
         <Route
           path="*"
           element={

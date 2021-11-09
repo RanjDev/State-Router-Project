@@ -39,25 +39,6 @@ export default function NavBar() {
           >
             Random Quote
           </NavLink>
-          <NavLink
-            to="/quote-cards"
-            className="text-indigo-700 hover:text-red-900"
-            style={({ isActive }) => {
-              return {
-                color: isActive ? "red" : "",
-              };
-            }}
-          >
-            Quote Cards
-          </NavLink>
-        </ul>
-        <ul className="px-4 flex gap-4">
-          <button className="px-2 py-1 rounded-md border-indigo-600 bg-indigo-600  text-white transition-all duration-200 hover:bg-white border-2 hover:text-indigo-600 hover:border-indigo-600">
-            Login
-          </button>
-          <button className="px-2 py-1 rounded-md border-indigo-600 bg-indigo-600  text-white transition-all duration-200 hover:bg-white border-2 hover:text-indigo-600 hover:border-indigo-600">
-            Sign Up
-          </button>
         </ul>
       </div>
     </div>
