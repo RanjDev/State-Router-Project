@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavBar from "./pages/components/NavBar";
+import { Routes, Route } from "react-router-dom";
+import Todo from "./pages/Todo";
+import Home from "./pages/components/Home";
+import RandomQuote from "./pages/RandomQuote";
+import QuoteCards from "./pages/QuoteCards";
+import QuoteCardDetail from "./pages/QuoteCardDetail";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen App bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 overflow-x-hidden ">
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/todo" element={<Todo />} />
+        <Route path="/random-quote" element={<RandomQuote />} />
+        <Route path="/quote-cards" element={<QuoteCards />} />
+        <Route path="/quote-cards/:detail" element={<QuoteCardDetail />} />
+        <Route
+          path="*"
+          element={
+            <main
+              style={{ padding: "1rem" }}
+              className="text-center text-4xl text-red-900 font-bold"
+            >
+              <p>#404, There's nothing here!</p>
+            </main>
+          }
+        />
+      </Routes>
     </div>
   );
 }
