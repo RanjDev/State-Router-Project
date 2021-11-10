@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import TodoInputForm from "./components/TodoInputForm";
 import TodoList from "./components/TodoList";
 
@@ -35,7 +35,7 @@ export default function Todo() {
   return (
     <div className="flex flex-col justify-center items-center bg-yellow-50 p-16 todo-height">
       <div className="h-auto  border-2 border-green-200 rounded-lg p-4 overflow-auto">
-        {todos.map((todoy, index, arr) => {
+        {todos.map((todoy, index) => {
           return (
             <div>
               <TodoList
